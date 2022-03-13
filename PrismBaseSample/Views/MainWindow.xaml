@@ -1,0 +1,23 @@
+﻿<Window x:Class="PrismBaseSample.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrismBaseSample.Views"
+        mc:Ignorable="d"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel ="True"
+        Title="{Binding Title}" Height="150" Width="450">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Margin="0,10,0,0" VerticalAlignment="Top" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Width="160" 
+                    Height="24" 
+                    HorizontalAlignment="Center" 
+                    Command="{Binding DialogCommand}"
+                    Content="ダイアログ"></Button>
+                <Label Width="250" Content="{Binding DialogText, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Label>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
