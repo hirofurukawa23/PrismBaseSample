@@ -1,0 +1,2 @@
+# PrismBaseSample
+Prismを使ったベースとなるWPFソリューション
